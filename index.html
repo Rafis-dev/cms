@@ -36,7 +36,7 @@
         <button class="cms__header-modal" type="button">Добавить товар</button>
       </div>
 
-      <div class="table__wrapper">
+      <div class="table-wrapper">
 
         <table class="cms__table table">
 
@@ -283,39 +283,37 @@
               </td>
             </tr>
 
-
-
           </tbody>
 
-          <tfoot class="table__footer">
-            <tr class="table__footer-row">
-
-              <td class="table__footer-data table__footer-select" colspan="6">
-                <label class="table__select-label" for="item-quantity">Показывать на странице:</label>
-                <select class="table__select" name="" id="item-quantity">
-                  <option class="table__select-option" value="10" selected>10</option>
-                  <option class="table__select-option" value="20">20</option>
-                  <option class="table__select-option" value="30">30</option>
-                  <option class="table__select-option" value="40">40</option>
-                </select>
-              </td>
-
-              <td class="table__footer-data">
-                1-10 of 276
-              </td>
-
-              <td class="table__footer-data table__footer-arrows">
-                <button class="table__button-left" type="button">
-                  <img class="table__arow-left" src="assets/images/icons/arrow-left.svg" alt="стрелка влево">
-                </button>
-                <button class="table__button-right" type="button">
-                  <img class="table__arow-right" src="assets/images/icons/arrow-right.svg" alt="стрелка вправо">
-                </button>
-              </td>
-
-            </tr>
-          </tfoot>
         </table>
+
+      </div>
+
+      <div class="cms__footer">
+
+        <div class="cms__footer-select">
+          <label class="cms__select-label" for="item-quantity">Показывать на странице:</label>
+          <select class="cms__select" name="item-quantity" id="item-quantity">
+            <option class="cms__select-option" value="10" selected>10</option>
+            <option class="cms__select-option" value="20">20</option>
+            <option class="cms__select-option" value="30">30</option>
+            <option class="cms__select-option" value="40">40</option>
+          </select>
+        </div>
+
+        <p class="cms__footer-quantity">
+          1-10 of <span class="cms__footer-total">276</span>
+        </p>
+
+        <div class="cms__footer-arrows">
+          <button class="cms__button-left" type="button">
+            <img class="cms__arow-left" src="assets/images/icons/arrow-left.svg" alt="стрелка влево">
+          </button>
+          <button class="cms__button-right" type="button">
+            <img class="cms__arow-right" src="assets/images/icons/arrow-right.svg" alt="стрелка вправо">
+          </button>
+        </div>
+
 
       </div>
     </div>
