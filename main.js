@@ -9,23 +9,18 @@
   console.log(quantity * price);
 }
 
+
 {
   const askProduct = prompt('Введите наименование товара', 'Колонки');
-  const askQuantity = prompt('Введите количество товара', '5');
+  const askQuantity = +prompt('Введите количество товара', '35');
   const askCategory = prompt('Введите категорию товара', 'Аудио');
-  const askPrice = prompt('Введите цену товара', '400');
+  const askPrice = +prompt('Введите цену товара', '150');
 
-  console.log(typeof askProduct);
-  console.log(typeof askQuantity);
-  console.log(typeof askCategory);
-  console.log(typeof askPrice);
 
-  const quantityToNum = +askQuantity;
-  const priceToNum = +askPrice;
-
-  console.log(typeof quantityToNum);
-  console.log(typeof priceToNum);
+  if (isNaN(askQuantity) || isNaN(askPrice)) {
+    alert('Вы ввели некорректные данные');
+  }
 
   console.log(`На складе ${askQuantity} единиц(-ы) товара ${askProduct} на сумму ${askPrice * askQuantity} рубля(-ей)`);
-
 }
+
