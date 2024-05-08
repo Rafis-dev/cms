@@ -3,7 +3,7 @@
 {
   const rain = Math.round(Math.random());
 
-  if (rain === 1) {
+  if (rain) {
     console.log('Пошёл дождь. Возьмите зонт!');
   } else {
     console.log('Дождя нет!');
@@ -26,7 +26,7 @@
 {
   const money = prompt('Сколько денег вы хотите снять?', '100');
 
-  if (money % 100 === 0) {
+  if (!(money % 100)) {
     console.log('Операция выполняется');
   } else {
     console.log('Ошибка! Введите сумму кратную 100')

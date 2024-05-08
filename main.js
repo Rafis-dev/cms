@@ -19,8 +19,10 @@
 
   if (isNaN(askQuantity) || isNaN(askPrice)) {
     alert('Вы ввели некорректные данные');
+  } else {
+    console.log(`На складе ${askQuantity} единиц(-ы) товара ${askProduct} на сумму ${askPrice * askQuantity} рубля(-ей)`);
   }
 
-  console.log(`На складе ${askQuantity} единиц(-ы) товара ${askProduct} на сумму ${askPrice * askQuantity} рубля(-ей)`);
+
 }
 
