@@ -11,4 +11,4 @@ const isPrime = (num) => {
 }
 
 
-console.log(isPrime());
+console.log(isPrime(5));
