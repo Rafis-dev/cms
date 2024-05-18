@@ -1,8 +1,8 @@
 'use strict';
 
-const usdRub = 73;
-const usdEuro = 1 / 1.2;
-
-const getRubles = euro => euro / usdEuro * usdRub;
-
-console.log(getRubles(100));
+for (let x = 2; x <= 10; x++) {
+  for (let y = 1; y <= 10; y++) {
+    console.log(`${x}^${y} = ${x ** y}`);
+  }
+  console.log("");
+}
