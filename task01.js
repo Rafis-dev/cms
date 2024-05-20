@@ -1,8 +1,18 @@
 'use strict';
 
-for (let x = 2; x <= 10; x++) {
-  for (let y = 1; y <= 10; y++) {
-    console.log(`${x}^${y} = ${x ** y}`);
+const allStudents = ['Иванов', 'Петров', 'Сидоров', 'Кузнецов', 'Смирнов', 'Попов', 'Соколов'];
+const failedStudents = ['Сидоров', 'Смирнов', 'Попов'];
+
+const filter = (arr1, arr2) => {
+  const successStudents = [];
+
+  for (const student of arr1) {
+    if (!arr2.includes(student)) {
+      successStudents.push(student);
+    }
   }
-  console.log("");
+  return successStudents;
 }
+
+
+console.log(filter(allStudents, failedStudents));

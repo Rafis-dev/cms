@@ -1,11 +1,14 @@
 'use strict';
 
-const reverseStr = (str) => {
-  let reversed = '';
-  for (let i = str.length - 1; i >= 0; i--) {
-    reversed += str[i];
+const names = ['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'Michael', 'Alexander'];
+
+const addPrefix = (arr, prefix) => {
+  let name = [];
+  for (let i of arr) {
+    name.push(prefix + ' ' + i);
   }
-  return reversed;
+
+  return name;
 }
 
-console.log(reverseStr('Привет, мир'));
+console.log(addPrefix(names, 'Mr'));
