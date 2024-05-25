@@ -1,27 +1,21 @@
 'use strict';
 
-const allCashbox = [
-  [12, 4500],
-  [7, 3210],
-  [4, 650],
-  [3, 1250],
-  [9, 7830],
-  [1, 990],
-  [6, 13900],
-  [1, 370]
-];
+const getLeapYears = (n, m) => {
 
-const getAveragePriceGoods = (arr) => {
-  let totalItems = 0;
-  let totaPrice = 0;
+  let min = Math.min(n, m);
+  let max = Math.max(n, m);
 
-  for (let item in arr) {
-    totalItems += arr[item][0];
-    totaPrice += arr[item][1];
+  let leapYears = [];
+
+  while (min <= max) {
+    if (!(min % 400) || !(min % 4) && min % 100) {
+      leapYears.push(min);
+    }
+    min++;
   }
 
-  return parseFloat((totaPrice / totalItems).toFixed(2));
+  return leapYears;
 
 }
 
-console.log(getAveragePriceGoods(allCashbox));
+console.log(getLeapYears(1900, 2020));

@@ -1,18 +1,13 @@
 'use strict';
 
-const allStudents = ['Иванов', 'Петров', 'Сидоров', 'Кузнецов', 'Смирнов', 'Попов', 'Соколов'];
-const failedStudents = ['Сидоров', 'Смирнов', 'Попов'];
 
-const filter = (arr1, arr2) => {
-  const successStudents = [];
+const generateArray = (arrLength) => {
+  let newArray = new Array(arrLength).fill();
 
-  for (const student of arr1) {
-    if (!arr2.includes(student)) {
-      successStudents.push(student);
-    }
-  }
-  return successStudents;
+  const resultArray = newArray.map(() => Math.round(Math.random() * 100));
+
+  return resultArray;
+
 }
 
-
-console.log(filter(allStudents, failedStudents));
+console.log(generateArray(15));

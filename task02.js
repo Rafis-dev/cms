@@ -1,15 +1,16 @@
 'use strict';
 
-const allCashbox = [4500, 3210, 650, 1250, 7830, 990, 13900, 370];
+const generateArray = (arrLength, n, m) => {
+  let newArray = new Array(arrLength).fill();
 
-const getAverageValue = (arr) => {
-  let total = 0;
+  const min = Math.min(n, m);
+  const max = Math.max(n, m);
 
-  for (let num of arr) {
-    total += num;
-  }
+  const resultArray = newArray.map(() =>
+    Math.round(Math.random() * (max - min)) + min);
 
-  return Math.floor(total / arr.length);
+  return resultArray;
+
 }
 
-console.log(getAverageValue(allCashbox));
+console.log(generateArray(15, 50, 70));

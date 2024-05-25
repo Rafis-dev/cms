@@ -1,14 +1,31 @@
 'use strict';
 
-const names = ['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'Michael', 'Alexander'];
+const generateArray = (arrLength, n, m, type) => {
 
-const addPrefix = (arr, prefix) => {
-  let name = [];
-  for (let i of arr) {
-    name.push(prefix + ' ' + i);
+  let newArray = new Array(arrLength).fill();
+
+  const min = Math.min(n, m);
+  const max = Math.max(n, m);
+
+  let randomNumber = () => Math.round(Math.random() * (max - min)) + min;
+
+  let resultArray = newArray.map(randomNumber);
+
+  if (type === 'even') {
+    resultArray = resultArray.filter(item => !(item % 2));
+  } else if (type === 'odd') {
+    resultArray = resultArray.filter(item => item % 2);
   }
 
-  return name;
+  while (resultArray.length < arrLength) {
+    let num = randomNumber();
+    if ((type === 'even' && !(num % 2)) || (type === 'odd' && num % 2)) {
+      resultArray.push(num);
+    }
+  }
+
+  return resultArray;
+
 }
 
-console.log(addPrefix(names, 'Mr'));
+console.log(generateArray(15, 50, 70, 'odd'));
