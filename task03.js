@@ -1,6 +1,6 @@
 'use strict';
 
-const generateArray = (arrLength, n, m, type) => {
+const generateArray3 = (arrLength, n, m, type) => {
 
   let newArray = new Array(arrLength).fill();
 
@@ -28,4 +28,4 @@ const generateArray = (arrLength, n, m, type) => {
 
 }
 
-console.log(generateArray(15, 50, 70, 'odd'));
+console.log(generateArray3(15, 50, 70, 'even'));

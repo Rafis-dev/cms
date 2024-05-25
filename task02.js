@@ -1,6 +1,6 @@
 'use strict';
 
-const generateArray = (arrLength, n, m) => {
+const generateArray2 = (arrLength, n, m) => {
   let newArray = new Array(arrLength).fill();
 
   const min = Math.min(n, m);
@@ -13,4 +13,4 @@ const generateArray = (arrLength, n, m) => {
 
 }
 
-console.log(generateArray(15, 50, 70));
+console.log(generateArray2(15, 50, 70));
