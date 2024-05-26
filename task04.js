@@ -1,11 +1,9 @@
 'use strict';
 
 const getLeapYears = (n, m) => {
-
   let min = Math.min(n, m);
   let max = Math.max(n, m);
-
-  let leapYears = [];
+  const leapYears = [];
 
   while (min <= max) {
     if (!(min % 400) || !(min % 4) && min % 100) {

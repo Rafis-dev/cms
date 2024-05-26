@@ -1,15 +1,10 @@
 'use strict';
 
 const generateArray3 = (arrLength, n, m, type) => {
-
-  let newArray = new Array(arrLength).fill();
-
   const min = Math.min(n, m);
   const max = Math.max(n, m);
-
-  let randomNumber = () => Math.round(Math.random() * (max - min)) + min;
-
-  let resultArray = newArray.map(randomNumber);
+  const randomNumber = () => Math.round(Math.random() * (max - min)) + min;
+  let resultArray = new Array(arrLength).fill().map(randomNumber);
 
   if (type === 'even') {
     resultArray = resultArray.filter(item => !(item % 2));
@@ -18,7 +13,7 @@ const generateArray3 = (arrLength, n, m, type) => {
   }
 
   while (resultArray.length < arrLength) {
-    let num = randomNumber();
+    const num = randomNumber();
     if ((type === 'even' && !(num % 2)) || (type === 'odd' && num % 2)) {
       resultArray.push(num);
     }
@@ -28,4 +23,4 @@ const generateArray3 = (arrLength, n, m, type) => {
 
 }
 
-console.log(generateArray3(15, 50, 70, 'even'));
+console.log(generateArray3(99, 10, -10, 'even'));
