@@ -36,7 +36,6 @@ const cart = {
   },
 };
 
-
 cart.add("Apple", 1.5, 4);
 cart.add("Banana", 1.2, 3);
 cart.add("Orange", 2.0, 2);
