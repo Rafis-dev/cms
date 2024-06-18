@@ -5,15 +5,14 @@ const cart = {
   totalPrice: 0,
   count: 0,
 
-  getTotalPrice() {
-    return this.totalPrice;
+  get totalPrice() {
+    return this.calculateItemPrice();
   },
 
   add(product, price, quantity = 1) {
     const item = { product, price, quantity };
     this.items.push(item);
     this.increaseCount(quantity);
-    this.calculateItemPrice();
   },
 
   increaseCount(num) {
@@ -21,7 +20,7 @@ const cart = {
   },
 
   calculateItemPrice() {
-    this.totalPrice = this.items.reduce((total, item) => total + item.price * item.quantity, 0);
+    return this.items.reduce((total, item) => total + item.price * item.quantity, 0);
   },
 
   clear() {
@@ -41,3 +40,6 @@ cart.add("Banana", 1.2, 3);
 cart.add("Orange", 2.0, 2);
 
 cart.print();
+
+
+
