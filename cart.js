@@ -2,7 +2,6 @@
 
 const cart = {
   items: [],
-  totalPrice: 0,
   count: 0,
 
   get totalPrice() {
@@ -25,7 +24,6 @@ const cart = {
 
   clear() {
     this.items = [];
-    this.totalPrice = 0;
     this.count = 0;
   },
 
