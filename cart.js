@@ -1,5 +1,3 @@
-'use strict';
-
 const cart = {
   items: [],
   count: 0,
@@ -19,7 +17,8 @@ const cart = {
   },
 
   calculateItemPrice() {
-    return this.items.reduce((total, item) => total + item.price * item.quantity, 0);
+    return this.items
+      .reduce((total, item) => total + item.price * item.quantity, 0);
   },
 
   clear() {
@@ -33,11 +32,10 @@ const cart = {
   },
 };
 
-cart.add("Apple", 1.5, 4);
-cart.add("Banana", 1.2, 3);
-cart.add("Orange", 2.0, 2);
+cart.add('Apple', 1.5, 4);
+cart.add('Banana', 1.2, 3);
+cart.add('Orange', 2.0, 2);
 
 cart.print();
-
 
 
